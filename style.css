@@ -11,6 +11,7 @@ header {
     background-color: #424242;
     height: 80px;
 }
+
 header > a > img {
     margin-top: 10px;
     height: 180px;
@@ -63,11 +64,11 @@ header > a > img {
 }
 
 .comp_info {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 20px 40px;
-    height: 700px;
+    width: 90%;
+
     background: #424242;
 }
 
@@ -184,6 +185,7 @@ img {
 }
 
 .gal {
+    margin-top: 10px;
     clip-path: polygon(0 0, 100% 3%, 100% 97%, 0 100%);
     background: center url("img/galary.jpg") #424242 no-repeat fixed;
     height: 1250px;
@@ -322,7 +324,7 @@ img {
     background: #424242;
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0px 95%);
     background: center url("img/user.jpg") no-repeat fixed;
-    background-size: 105%;
+    background-size: 200%;
 }
 
 .parallax_black {
@@ -359,15 +361,18 @@ img {
 }
 
 .rent {
+    margin: 10px 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 10px 30px 0;
+    grid-gap: 20px;
 }
 
 .form_img {
-    background: center url("img/form_img.jpg");
-    width: 600px;
-    height: 700px;
+    margin: 0 auto;
+    background: center url("img/form_img.jpg") no-repeat;
+    width: 500px;
+    height: 600px;
+    background-size: 150%;
 }
 
 .form {
@@ -408,6 +413,7 @@ img {
 }
 
 footer {
+    margin-top: 10px;
     font-size: 18px;
     background-color: #eaeaea;
     display: grid;
@@ -450,11 +456,10 @@ a:hover {
 
 
 @media screen and (min-width: 1200px) {
-    .comp_info {
-        margin: 20px 20px;
-        height: max-content;
-    }
-
+    /*.comp_info {*/
+    /*    margin: 20px 20px;*/
+    /*    height: max-content;*/
+    /*}*/
     .bg_img1,
     .bg_img2,
     .bg_img3,
@@ -475,30 +480,67 @@ a:hover {
     .gal {
         height: 1100px;
     }
-
-    .form_img {
-        width: 550px;
-        height: 650px;
-    }
 }
 
 @media screen and (max-width: 992px) {
+    header a img{
+        height: 135px;
+        margin-left: calc(50% - 135px/ 2 + 10px);
+        width: 110px;
+    }
+    .about{
+        font-size: 18px;
+    }
     .img_arr > div {
         height: 250px;
         background-size: 110%;
     }
+    .shadow_comp_info{
+        height: 180px;
+    }
+    .bg_img1,
+    .bg_img2,
+    .bg_img3,
+    .bg_img4,
+    .bg_img5,
+    .bg_img6,
+    .bg_img7,
+    .bg_img8,
+    .bg_img9 {
+        height: 300px;
+    }
 
     .gal {
-        height: 950px;
+        height: max-content;
+        /*padding: 10px 0;*/
+    }
+
+    .gal_black {
+        height: max-content;
+        padding: 20px 0;
+    }
+
+    .img_arr > div {
+        height: 200px;
+        background-size: 110%;
+    }
+
+    .user h1{
+        font-size: 18px;
+    }
+    .user p {
+        font-size: 12px;
     }
 
     .form_img {
-        width: 500px;
-        height: 600px;
+        margin-top: calc(75% - 450px / 2 + 10px);
+        width: 350px;
+        height: 450px;
     }
 
     .form {
         padding-top: 20px;
+        width: 100%;
     }
 
     .form > h1 {
@@ -507,7 +549,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
     header > a > img {
         margin-top: 25px;
         height: auto;
@@ -573,8 +615,7 @@ a:hover {
         display: block;
         margin: 10px 30px 0;
     }
-
-    .form_img {
+    .form_img{
         display: none;
     }
 }
